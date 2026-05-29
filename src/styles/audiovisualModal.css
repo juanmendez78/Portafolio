@@ -1,0 +1,115 @@
+/* Fondo oscuro */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 15, 0.85);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Contenedor principal */
+.modal-content {
+  background: linear-gradient(
+    180deg,
+    rgba(20, 10, 40, 0.95),
+    rgba(10, 10, 25, 0.95)
+  );
+  border-radius: 20px;
+  padding: 32px;
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  color: white;
+  box-shadow: 0 30px 80px rgba(140, 69, 255, 0.35);
+  animation: modalIn 0.35s ease;
+}
+
+/* Animación entrada */
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Botón cerrar */
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #c4b5fd;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: white;
+}
+
+/* Título */
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+/* Descripción */
+.modal-content p {
+  line-height: 1.6;
+  color: #e5e7eb;
+  margin-bottom: 20px;
+}
+
+/* Herramientas */
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.tools span {
+  background: rgba(140, 69, 255, 0.15);
+  color: #c4b5fd;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+/* Video */
+.modal-content iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  border: none;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 22px;
+  }
+
+  .modal-content h2 {
+    font-size: 1.6rem;
+  }
+}
+
+.poster-image {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: contain;
+  max-height: 70vh;
+}

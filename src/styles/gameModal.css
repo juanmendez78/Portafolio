@@ -1,0 +1,152 @@
+/* Overlay oscuro */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 20, 0.85);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  animation: fadeIn 0.3s ease;
+}
+
+/* Contenedor del modal */
+.modal-content {
+  background: linear-gradient(180deg, #0e0e1a, #121225);
+  color: #eaeaff;
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  border-radius: 16px;
+  padding: 24px 28px;
+  overflow-y: auto;
+  position: relative;
+
+  box-shadow:
+    0 0 30px rgba(140, 70, 255, 0.25),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+  animation: scaleUp 0.3s ease;
+}
+
+/* Scroll bonito */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+  background: #7c3aed;
+  border-radius: 10px;
+}
+
+/* Botón cerrar */
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  color: #cfcfff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.close-btn:hover {
+  color: #a855f7;
+  transform: scale(1.1);
+}
+
+/* Títulos */
+.modal-content h2 {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.platform {
+  color: #a855f7;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.description {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Aporte */
+.modal-content h4 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: #c084fc;
+}
+
+/* Video */
+.video-container {
+  margin: 24px 0;
+  position: relative;
+  padding-top: 56.25%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Galería */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 20px;
+  }
+
+  .modal-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
