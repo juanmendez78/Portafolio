@@ -10,9 +10,9 @@ import sd2 from '../assets/images/tempfile2.png';
 import sd3 from '../assets/images/tempfile3.png';
 
 import clockspirit from '../assets/images/clockspiritJ.png';
-import cs1 from '../assets/images/cs1.png';
-import cs2 from '../assets/images/cs2.png';
-import cs3 from '../assets/images/cs3.png';
+import cs1 from '../assets/images/clock1.png';
+import cs2 from '../assets/images/clock2.png';
+import cs3 from '../assets/images/clock3.png';
 
 import logojuanvaldez from '../assets/images/logojuanvaldez.jpg';
 import cafe1 from '../assets/images/cafeJ1.png';
