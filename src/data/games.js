@@ -4,7 +4,7 @@ import af1 from '../assets/images/af1.png';
 import af2 from '../assets/images/af2.png';
 import af3 from '../assets/images/af3.png';
 
-import seconddash from '../assets/images/SecondDash.png';
+import seconddash from '../assets/images/temp.png';
 import sd1 from '../assets/images/sd1.png';
 import sd2 from '../assets/images/sd2.png';
 import sd3 from '../assets/images/sd3.png';
