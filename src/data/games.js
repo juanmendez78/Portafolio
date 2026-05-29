@@ -5,9 +5,9 @@ import af2 from '../assets/images/af2.png';
 import af3 from '../assets/images/af3.png';
 
 import seconddash from '../assets/images/temp.png';
-import sd1 from '../assets/images/sd1.png';
-import sd2 from '../assets/images/sd2.png';
-import sd3 from '../assets/images/sd3.png';
+import sd1 from '../assets/images/tempfile1.png';
+import sd2 from '../assets/images/tempfile2.png';
+import sd3 from '../assets/images/tempfile3.png';
 
 import clockspirit from '../assets/images/clockspirit.png';
 import cs1 from '../assets/images/cs1.png';
