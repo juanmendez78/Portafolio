@@ -1,47 +1,59 @@
 import { useNavigate } from "react-router-dom"
+import { motion } from "framer-motion"
+import { useLanguage } from "../context/LanguageContext"
 import "../styles/hero.css"
-import AnimatedSection from "../components/AnimatedSection"
-import edward1 from "../assets/images/edward1.png";
+import edward1 from "../assets/images/edward1.png"
+import Skills from "../components/Skills"
+import Education from "../components/Education"
 
 function Home() {
   const navigate = useNavigate()
+  const { t } = useLanguage()
 
   return (
-    <AnimatedSection>
-    <section className="hero">
-      <div className="hero-content">
-        <h2>
-          Game Developer <span>& Multimedia Engineer</span>
-        </h2>
+    <>
+      <section className="hero">
+        <motion.div
+          className="hero-content"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
+          <p className="hero-eyebrow">{t.hero.eyebrow}</p>
 
-        <p>
-          Soy Juan Esteban Méndez Tobar, egresado de Ingeniería Multimedia con un fuerte enfoque en el desarrollo de videojuegos en Unity 2D y 3D. Tengo experiencia en AR y VR, así como en la producción de contenido audiovisual utilizando Adobe Premiere Pro, After Effects y Photoshop.
-</p>
-<p>
-        Me apasiona el diseño de mecánicas de juego, la creación de experiencias interactivas y el desarrollo de proyectos que integren programación, arte y narrativa.
-        </p>
+          <h2>
+            {t.hero.title} <span>{t.hero.titleSpan}</span>
+          </h2>
 
-        <div className="hero-buttons">
-          <button
-            className="btn primary"
-            onClick={() => navigate("/videojuegos")}
-          >
-            Ver videojuegos
-          </button>
+          <p className="hero-bio">{t.hero.bio}</p>
+          <p className="hero-cta-text">{t.hero.cta}</p>
 
-          <button
-            className="btn secondary"
-            onClick={() => navigate("/audiovisual")}
-          >
-            Ver audiovisual
-          </button>
-        </div>
-      </div>
-    <div className="hero-image">
-    <img src={edward1} alt="personaje" />
-  </div>
-    </section>
-    </AnimatedSection>
+          <div className="hero-buttons">
+            <button className="btn primary" onClick={() => navigate("/videojuegos")}>
+              {t.hero.btnGames}
+            </button>
+            <button className="btn secondary" onClick={() => navigate("/audiovisual")}>
+              {t.hero.btnAudio}
+            </button>
+            <a className="btn cv" href="/cv.pdf" download="CV-Juan-Mendez.pdf">
+              {t.hero.btnCV}
+            </a>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="hero-image"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        >
+          <img src={edward1} alt="personaje" />
+        </motion.div>
+      </section>
+
+      <Skills />
+      <Education />
+    </>
   )
 }
 

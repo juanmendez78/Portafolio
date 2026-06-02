@@ -1,3 +1,4 @@
+import Badge from "./Badge"
 import "../styles/audiovisualCard.css"
 
 function AudiovisualCard({ title, type, cover, onClick }) {
@@ -7,7 +8,7 @@ function AudiovisualCard({ title, type, cover, onClick }) {
 
       <div className="audiovisual-info">
         <h3>{title}</h3>
-        <span>{type}</span>
+        <Badge value={type} />
       </div>
     </div>
   )

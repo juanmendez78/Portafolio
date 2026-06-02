@@ -1,0 +1,131 @@
+.skills-section {
+  padding: 4rem 8%;
+}
+
+.skills-section h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 56px;
+  position: relative;
+}
+
+.skills-section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #7c3aed, #a855f7);
+  border-radius: 4px;
+  margin: 16px auto 0;
+}
+
+/* Contenedor horizontal: game dev | divisor | multimedia */
+.skills-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.skills-group {
+  flex: 1;
+}
+
+.skills-group h3 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+
+.skills-divider {
+  width: 1px;
+  align-self: stretch;
+  background: rgba(127, 60, 255, 0.2);
+}
+
+/* Grid de cards */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 14px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 12px;
+  background: rgba(127, 60, 255, 0.07);
+  border: 1px solid rgba(127, 60, 255, 0.15);
+  border-radius: 12px;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  cursor: default;
+}
+
+.skill-card:hover {
+  background: rgba(127, 60, 255, 0.15);
+  border-color: rgba(127, 60, 255, 0.4);
+  transform: translateY(-3px);
+}
+
+.skill-icon {
+  font-size: 2rem;
+  color: var(--accent-hover);
+  display: flex;
+  align-items: center;
+}
+
+.skill-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #c4b5fd;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 3rem 5%;
+  }
+
+  .skills-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 36px;
+  }
+
+  .skills-divider {
+    width: 100%;
+    height: 1px;
+    align-self: auto;
+  }
+
+  .skills-group h3 {
+    text-align: center;
+  }
+
+  .skills-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 2.5rem 4%;
+  }
+
+  .skills-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

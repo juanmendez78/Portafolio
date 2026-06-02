@@ -8,6 +8,7 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 a {
@@ -17,4 +18,16 @@ a {
 
 section {
   padding: 4rem 8%;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 2.5rem 4%;
+  }
 }

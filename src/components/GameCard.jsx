@@ -1,3 +1,4 @@
+import Badge from "./Badge"
 import "../styles/gameCard.css"
 
 function GameCard({ title, platform, cover, onClick }) {
@@ -7,7 +8,7 @@ function GameCard({ title, platform, cover, onClick }) {
 
       <div className="game-card-info">
         <h3>{title}</h3>
-        <span>{platform}</span>
+        <Badge value={platform} />
       </div>
     </div>
   )

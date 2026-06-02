@@ -26,6 +26,7 @@ export const games = [
     title: "Ascenso Fragmentado",
     platform: "PC",
     cover: tituloaf,
+    tech: ["Unity 3D", "C#", "Input System"],
 
     description:
       "Ascenso Fragmentado es un videojuego 3D donde podrás elegir entre dos personajes, personalizarlos, usar mascotas y superar obstáculos escalando hasta la cima. Incluye sistema de progresión y un modo multijugador en desarrollo para jugar con amigos.",
@@ -43,6 +44,7 @@ export const games = [
     title: "Second Dash",
     platform: "PC",
     cover: seconddash,
+    tech: ["Unity 2D", "C#"],
 
     description:
       "Juego 2D donde controlas a Red en un mundo distópico. Deberás esconderte de enemigos, superar obstáculos y resolver puzzles para descubrir la verdad detrás de un sistema corrupto.",
@@ -60,6 +62,7 @@ export const games = [
     title: "Clock Spirit",
     platform: "MOBILE",
     cover: clockspirit,
+    tech: ["Unity 2D", "C#", "Input System"],
 
     description:
       "Juego 2D donde ayudas a un estudiante a enfrentarse a los demonios de la procrastinación. Combate, completa tareas y conoce aliados mientras trabajas por salvar a los universitarios y recuperar el control del tiempo.",
@@ -77,6 +80,7 @@ export const games = [
     title: "Cafe Juan Valdez",
     platform: "AR",
     cover: logojuanvaldez,
+    tech: ["Unity 2D", "C#", "Vuforia"],
 
     description:
       "Aplicación de realidad aumentada sobre café Juan Valdez que incluye una sección informativa sobre su historia y una experiencia interactiva en RA donde pueden explorarse distintos tipos de café y ver sus características.",
